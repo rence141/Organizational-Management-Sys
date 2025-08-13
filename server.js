@@ -1,0 +1,12 @@
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+// Import routes
+const mainRoutes = require('./routes/mainroutes');
+app.use('/', mainRoutes);
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
