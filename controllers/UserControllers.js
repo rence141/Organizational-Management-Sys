@@ -1,5 +1,33 @@
 // controllers/userController.js
+const User = require("../models/userModel");
 
+// CREATE
+exports.createUser = async (req, res) => {
+  try {
+    const user = await User.create(req.body); // Save to DB
+    res.status(201).json(user);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+};
+
+// READ ALL
+exports.getUsers = async (req, res) => {
+  const users = await User.find();
+  res.status(200).json(users);
+};
+
+// READ ONE
+exports.getUserById = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) return res.status(404).json({ message: "User not found" });
+    res.status(200).json(user);
+  } catch (err) {
+    res.status(400).json({ message: "Invalid ID format" });
+  }
+};
+// UPDATE
 // Create User
 exports.createUser = (req, res) => {
   const { name, email } = req.body || {};
@@ -13,8 +41,9 @@ exports.createUser = (req, res) => {
     : 1;
 
   // Create new user
-  const newUser = { id: newId, name, email };
+  const newUser = { id: newId, name, email, age: req.body.age || null };
   req.store.users.push(newUser);
+
 
   return res.status(201).json({ message: 'User created', user: newUser });
 };
