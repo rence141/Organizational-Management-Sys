@@ -11,4 +11,5 @@ router.get('/users/:id', c.getUserById);         // GET  /api/users/1 → read o
 router.put('/users/:id', c.updateUser);          // PUT  /api/users/1 → update
 router.delete('/users/:id', c.deleteUser);       // DELETE /api/users/1 → delete
 
+
 module.exports = router;                        // Export router so app.js can use it
