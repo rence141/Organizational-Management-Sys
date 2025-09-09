@@ -9,6 +9,8 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }           // Store the HASHED password (never plain text)
 });
 
+
+
 // Compile the schema into a Model named "User" (maps to "users" collection)
 const User = mongoose.model("User", userSchema);
 
