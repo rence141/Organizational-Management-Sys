@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 });
 
 // MongoDB Connection
-mongoose.connect("mongodb+srv://test:Lorenzezz003421@cluster0.vovdaod.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://lorenzezz0987:Lorenzezz003421@cluster0.vovdaod.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")
   .then(() => console.log("✅ MongoDB connected"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
