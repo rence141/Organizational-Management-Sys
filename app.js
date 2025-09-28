@@ -17,17 +17,10 @@ app.use((req, res, next) => {
 });
 
 // MongoDB Connection
-mongoose.connect(
-"mongodb+srv://lorenzezz0987:Lorenzezz003421@cluster0.vovdaod.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-)
-.then(() => console.log("✅ MongoDB connected"))
-.catch(err => console.error("❌ MongoDB connection error:", err));
+mongoose.connect("mongodb+srv://test:Lorenzezz003421@cluster0.vovdaod.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch(err => console.error("❌ MongoDB connection error:", err));
 
-// Routes
 app.use('/api', userRoutes);      // e.g., /api/users
 app.use('/api/auth', authRoutes); // e.g., /api/auth/signup, /api/auth/login
 
