@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../framework-nosql-labs"
+		},
+		{
+			"name": "framework-nosql-labs-1",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
