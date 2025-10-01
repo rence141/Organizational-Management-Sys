@@ -4,6 +4,9 @@ const bcrypt = require("bcrypt");
 const User = require("./models/userModel");
 const Product = require("./models/productModels");
 const { MONGODB_URI, JWT_SECRET } = require("./config");
+
+const MONGODB_URI = process.env.MONGODB_URI || "bennykyut3421.!";
+
 console.log("Connecting to:", MONGODB_URI);
 console.log("JWT Secret:", JWT_SECRET);
 

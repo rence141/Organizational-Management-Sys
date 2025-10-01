@@ -35,7 +35,7 @@ exports.login = async (req, res) => {
       email: user.email,
       role: user.role
     };
-    
+
     const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "1h" });
 
     console.log("Login successful, token:", token); // 🔹 debug
@@ -45,3 +45,4 @@ exports.login = async (req, res) => {
     return res.status(500).json({ message: err.message });
   }
 };
+
