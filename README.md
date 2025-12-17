@@ -6,6 +6,9 @@
 
 **Project:** Organization Management System(OMS)
 
+<img width="1866" height="957" alt="image" src="https://github.com/user-attachments/assets/8b9ff147-6f31-47f6-82c6-97136abfd972" />
+
+
 **Members:**
 - Prepotente Lorenze
 - Sayson Kyla
