@@ -1,23 +1,19 @@
-// routes/userRoutes.js
-const express = require('express');              // Import Express
-const router = express.Router();                 // Create a new router object
-const c = require('../controllers/UserControllers');
-const auth = require("../middleware/authmiddleware");   // JWT auth middleware
- // Import controller functions
+const express = require('express');
+const router = express.Router();
+const { protect } = require('../middleware/authMiddleware');
+const { 
+    getUserById, 
+    updateUser, 
+    deleteUser,
+    changePassword  // Add this line
+} = require('../controllers/userController');
 
+// Existing routes
+router.get('/:id', protect, getUserById);
+router.put('/:id', protect, updateUser);
+router.delete('/:id', protect, deleteUser);
 
-// Public routes (if any) would go here
+// Add this new route for password change
+router.post('/:id/change-password', protect, changePassword);
 
-// Protected routes: require a valid JWT to access
-router.get("/users", auth, c.getUsers);    // List users only if token is valid
-router.get("/users/:id", auth, c.getUserById); // Get user by id if token valid
-
-// (If you have create/update/delete users, you may protect them too)
-router.post("/users", auth, c.createUser);
-router.put("/users/:id", auth, c.updateUser);
-router.delete("/users/:id", auth, c.deleteUser);
-
-// Export the router to be mounted in app.js at /api
 module.exports = router;
-
-module.exports = router;                        // Export router so app.js can use it
