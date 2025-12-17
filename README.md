@@ -1,45 +1,24 @@
 # Framework and NoSQL Technologies - Laboratory Repository
 
-**Student Name:** Prepotente, Lorenze Nino 
-
 **Course & Section:** BSIS 3A 
 
 **Professor:** Guillermo, Red
 
-**Email:** lnfp2023-9707-52211@bicol-u.edu.ph
+**Project:** Organization Management System(OMS)
 
- 
+**Members:**
+- Prepotente Lorenze
+- Sayson Kyla
+- Pesino Selwyn
+- Sariba James
+- Secreto Benny
 
-## Repository Purpose
+## Description
+The Organization Management System (OMS) is a web-based application designed to streamline the administrative tasks of an organization. It facilitates member management, event scheduling, and resource allocation, aiming to improve operational efficiency and data organization.
 
-This repository contains all laboratory outputs from Week 1 to Week 9, progressively building toward a full-stack midterm project.
-
- 
-
-## Lab Timeline
-
-| Week | Description |
-
-|------|-------------|
-
-| 1    | Environment Setup & GitHub Integration |
-
-| 2–7  | Backend, Frontend, and NoSQL Development |
-
-| 8    | Project Polish & Local Output |
-
-| 9    | Deployment to Render & Atlas |
-
- 
-
-## Setup Instructions
-
-- Install Node.js, Git, and VS Code.
-
-- Clone this repository and run `npm init -y`.
-
- 
-
-## License
-
-Academic use only.
+## Total Pages
+1. Login Page
+2. Dashboard
+3. Member Management
+4. Event Scheduling
+5. Resource Allocation
