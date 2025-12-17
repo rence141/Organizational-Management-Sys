@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Direct Test</title>
+</head>
+<body style="background: blue; color: white; padding: 20px;">
+    <h1>DIRECT HTML TEST</h1>
+    <p>If you can see this, the browser is working</p>
+    <div id="root"></div>
+    <script>
+        console.log('JavaScript is working');
+        document.getElementById('root').innerHTML = '<h2>JavaScript injected this content</h2>';
+    </script>
+</body>
+</html>

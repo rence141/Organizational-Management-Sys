@@ -5,3 +5,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dark mode overrides */
+@layer base {
+  html.dark {
+    color-scheme: dark;
+  }
+  
+  html.dark body {
+    background-color: rgb(15 23 42);
+    color: rgb(241 245 249);
+  }
+}
+
+/* Force dark mode for specific elements */
+@layer utilities {
+  .dark-force {
+    background-color: rgb(15 23 42) !important;
+    color: rgb(241 245 249) !important;
+  }
+  
+  .dark-force-bg {
+    background-color: rgb(30 41 59) !important;
+  }
+  
+  .dark-force-border {
+    border-color: rgb(51 65 85) !important;
+  }
+}

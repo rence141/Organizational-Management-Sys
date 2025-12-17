@@ -1,10 +1,18 @@
 {
   "dependencies": {
+    "@headlessui/react": "^2.2.9",
     "auth": "^1.2.3",
     "bcrypt": "^6.0.0",
+    "chart.js": "^4.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "framer-motion": "^12.23.26",
     "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.561.0",
     "mongodb": "^6.20.0",
-    "mongoose": "^8.18.0"
+    "mongoose": "^8.18.0",
+    "nodemailer": "^7.0.11",
+    "react-chartjs-2": "^5.3.1"
   }
 }
