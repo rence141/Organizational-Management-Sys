@@ -3,10 +3,8 @@
     name: organizational-management-sys
     env: node
     buildCommand: |
-      rm -rf node_modules
-      npm install --no-package-lock
-      npm install iconv-lite@0.4.24 --save-exact
-      cd frontend && npm ci && npm run build
+      npm install
+      cd frontend && npm install && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
