@@ -16,6 +16,6 @@
           name: organizational-db
           property: connectionString
       - key: NODE_VERSION
-        value: 18.x
+        value: 20.x
     plan: free
     region: singapore
