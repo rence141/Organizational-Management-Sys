@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+﻿import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 // Pages
 import Landing from "./pages/landing.jsx";
-import Login from "./pages/login.jsx";
+import Login from "./pages/Login.jsx";
 import SignUp from "./pages/sign-up.jsx";
 import BasicTest from "./pages/BasicTest";
 import Dashboard from "./pages/Dashboard";
@@ -59,7 +59,7 @@ export default function App() {
                   <Route path="/organizations" element={<ProtectedRoute><Organizations /></ProtectedRoute>} />
                   <Route path="/organizations/find" element={<ProtectedRoute><FindOrganization /></ProtectedRoute>} />
                   
-                  {/* ✅ FIXED: Added Dynamic Route for "Manage" Button */}
+                  {/* âœ… FIXED: Added Dynamic Route for "Manage" Button */}
                   {/* This catches URLs like /organization/org_123 */}
                   <Route path="/organization/:id" element={<ProtectedRoute><MyOrganization /></ProtectedRoute>} />
                   
