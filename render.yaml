@@ -2,11 +2,10 @@ services:
   - type: web
     name: organizational-management-sys
     env: node
-    rootDir: .
     buildCommand: |
       npm install
       cd frontend && npm install && npm run build
-    startCommand: npm start
+    startCommand: node server.js
     envVars:
       - key: NODE_ENV
         value: production
@@ -16,5 +15,7 @@ services:
         fromDatabase:
           name: organizational-db
           property: connectionString
+      - key: NODE_VERSION
+        value: 18.x
     plan: free
     region: singapore
